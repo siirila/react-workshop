@@ -8,6 +8,7 @@ const exercises = [
   'styling',
   'composition',
   'state',
+  'data-fetching',
 ]
 
 exercises.forEach((exercise, i) => {
