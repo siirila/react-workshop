@@ -57,8 +57,6 @@ import React, {PropTypes, Component} from 'react'
 //   done with everything else.
 // WORKSHOP_END
 
-export default RepoList
-
 class RepoList extends Component {
   // FINAL_START
   state = {repos: []}
@@ -107,3 +105,5 @@ export const example = () => (
   <RepoList username="kentcdodds" />
 )
 // FINAL_END
+
+export default RepoList

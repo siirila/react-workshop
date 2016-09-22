@@ -1,8 +1,6 @@
 import React, {PropTypes} from 'react'
 import './03-styling.css'
 
-export default Box
-
 function Box(props) {
   return (
     <div className={`Box Box--${props.size}`} style={props.style}>
@@ -40,3 +38,5 @@ export const example = () => (
     </Box>
   </div>
 )
+
+export default Box

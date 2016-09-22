@@ -1,7 +1,5 @@
 import React, {PropTypes, Component} from 'react'
 
-export default RepoList
-
 class RepoList extends Component {
   state = {repos: []}
 
@@ -32,3 +30,5 @@ RepoList.propTypes = {
 export const example = () => (
   <RepoList username="kentcdodds" />
 )
+
+export default RepoList

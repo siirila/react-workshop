@@ -1,7 +1,6 @@
 import React from 'react'
 import './05-state.css'
 
-export default StopWatch
 
 
 class StopWatch extends React.Component {
@@ -46,7 +45,7 @@ class StopWatch extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="StopWatch">
         <label>{this.state.lapse}ms</label>
         <button onClick={this.handleRunClick}>{this.state.running ? 'Stop' : 'Start'}</button>
         <button onClick={this.handleClearClick}>Clear</button>
@@ -59,3 +58,5 @@ class StopWatch extends React.Component {
 export const example = () => (
   <StopWatch />
 )
+
+export default StopWatch

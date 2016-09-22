@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import logo from './logo.svg'
 import './App.css'
+import StopWatch from './exercises-final/05-state'
 
 class App extends Component {
   render() {
@@ -13,6 +14,12 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <div>
+          <p>
+            Here's one of the components from the workshop!
+          </p>
+          <StopWatch />
+        </div>
       </div>
     )
   }

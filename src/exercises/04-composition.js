@@ -2,8 +2,6 @@ import React, {PropTypes} from 'react'
 import 'font-awesome/css/font-awesome.min.css'
 import './04-composition.css'
 
-export default Person
-
 function Person(props) {
   // compose the <Avatar /> and <Icon /> components together to create this <Person /> component
   // - <div className="Person"> is your root element
@@ -60,3 +58,5 @@ export const example = () => (
     with all the required props (specify your own info if you want).
   </div>
 )
+
+export default Person

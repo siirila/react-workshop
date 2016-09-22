@@ -1,7 +1,5 @@
 import React from 'react'
 
-export default SayHello
-
 function SayHello(props) {
   return (
     <div>Hello {props.firstName} {props.lastName}!</div>
@@ -10,3 +8,5 @@ function SayHello(props) {
 export const example = () => (
   <SayHello firstName="Jill" lastName="Mayfield" />
 )
+
+export default SayHello

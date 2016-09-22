@@ -1,13 +1,13 @@
-body {
+.StopWatch {
   text-align: center;
 }
 
-label {
+.StopWatch label {
   font-size: 5em;
   display: block;
 }
 
-button {
+.StopWatch button {
   border: 1px solid #ccc;
   background: #fff;
   font-size: 2em;

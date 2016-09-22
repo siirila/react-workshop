@@ -1,7 +1,5 @@
 import React from 'react'
 
-export default SayHello
-
 function SayHello(props) {
   // Return JSX that uses the firstName and lastName values from the props argument
   // to render "Hello {firstName} {lastName}"
@@ -14,3 +12,5 @@ function SayHello(props) {
 export const example = () => (
   <div>Incomplete</div>
 )
+
+export default SayHello

@@ -2,8 +2,6 @@ import React, {PropTypes} from 'react'
 import 'font-awesome/css/font-awesome.min.css'
 import './04-composition.css'
 
-export default Person
-
 function Person(props) {
   return (
     <div className="Person">
@@ -74,3 +72,5 @@ export const example = () => (
     github="kentcdodds"
   />
 )
+
+export default Person

@@ -55,8 +55,6 @@ import React, {PropTypes, Component} from 'react'
 //   to avoid this, I recommend you return some fake data in `componentWillMount` and only implement that when you're
 //   done with everything else.
 
-export default RepoList
-
 class RepoList extends Component {
   render() {
     return (
@@ -74,3 +72,5 @@ RepoList.propTypes = {
 export const example = () => (
   <div>Render the RepoList here</div>
 )
+
+export default RepoList

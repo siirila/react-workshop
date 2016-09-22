@@ -7,8 +7,6 @@ import React, {PropTypes} from 'react'
 import './03-styling.css'
 // FINAL_END
 
-export default Box
-
 function Box(props) {
   return (
     // WORKSHOP_START
@@ -67,3 +65,5 @@ export const example = () => (
   </div>
 )
 // FINAL_END
+
+export default Box

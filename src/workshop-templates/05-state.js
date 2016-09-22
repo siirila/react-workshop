@@ -1,7 +1,6 @@
 import React from 'react'
 import './05-state.css'
 
-export default StopWatch
 
 // WORKSHOP_START
 // So far we've just been using function components.
@@ -113,7 +112,7 @@ class StopWatch extends React.Component {
     // WORKSHOP_END
     // FINAL_START
     return (
-      <div>
+      <div className="StopWatch">
         <label>{this.state.lapse}ms</label>
         <button onClick={this.handleRunClick}>{this.state.running ? 'Stop' : 'Start'}</button>
         <button onClick={this.handleClearClick}>Clear</button>
@@ -127,3 +126,5 @@ class StopWatch extends React.Component {
 export const example = () => (
   <StopWatch />
 )
+
+export default StopWatch

@@ -2,8 +2,6 @@ import React, {PropTypes} from 'react'
 // import the css styles using: `import './03-styling.css'`
 // this will use webpack to load the css styles into your app.
 
-export default Box
-
 function Box(props) {
   return (
     // render a div with the props:
@@ -29,3 +27,5 @@ export const example = () => (
     (whatever you want, maybe consider `backgroundColor`)
   </div>
 )
+
+export default Box

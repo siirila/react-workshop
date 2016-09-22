@@ -1,7 +1,6 @@
 import React from 'react'
 import './05-state.css'
 
-export default StopWatch
 
 // So far we've just been using function components.
 // Now that we need to worry about state in our component, we need to use the ES6 class syntax.
@@ -50,3 +49,5 @@ class StopWatch extends React.Component {
 export const example = () => (
   <StopWatch />
 )
+
+export default StopWatch
