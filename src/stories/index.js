@@ -6,6 +6,8 @@ const exercises = [
   'props',
   'prop-types',
   'styling',
+  'composition',
+  'state',
 ]
 
 exercises.forEach((exercise, i) => {

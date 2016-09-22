@@ -11,6 +11,7 @@ function Box(props) {
   )
 }
 
+// I'm gonna give this one to you. Isn't that nice? :)
 Box.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   style: PropTypes.object,

@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+}
+
+label {
+  font-size: 5em;
+  display: block;
+}
+
+button {
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 2em;
+  padding: 15px;
+  margin: 0 5px;
+  width: 200px;
+}

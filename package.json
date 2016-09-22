@@ -3,20 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@kadira/storybook": "^2.5.2",
+    "@kadira/storybook": "2.5.2",
     "lodash.padstart": "4.6.1",
+    "npm-run-all": "3.1.0",
     "react-scripts": "0.4.3",
     "split-guide": "1.1.0"
   },
   "dependencies": {
+    "font-awesome": "4.6.3",
     "react": "15.3.2",
     "react-dom": "15.3.2"
   },
   "scripts": {
     "watch:split:src": "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
-    "split": "npm run split:src & npm run split:intro",
+    "split": "npm-run-all --parallel split:*",
     "split:src": "cd src && split-guide generate --templates-dir workshop-templates",
     "split:intro": "cd intro && split-guide generate --templates-dir workshop-templates",
+    "setup": "npm install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
