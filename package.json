@@ -1,0 +1,27 @@
+{
+  "name": "react-workshop",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@kadira/storybook": "^2.5.2",
+    "lodash.padstart": "4.6.1",
+    "react-scripts": "0.4.3",
+    "split-guide": "1.1.0"
+  },
+  "dependencies": {
+    "react": "15.3.2",
+    "react-dom": "15.3.2"
+  },
+  "scripts": {
+    "watch:split:src": "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
+    "split": "npm run split:src & npm run split:intro",
+    "split:src": "cd src && split-guide generate --templates-dir workshop-templates",
+    "split:intro": "cd intro && split-guide generate --templates-dir workshop-templates",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook --port 9009 --dont-track --config-dir ./.storybook",
+    "build-storybook": "build-storybook"
+  }
+}
