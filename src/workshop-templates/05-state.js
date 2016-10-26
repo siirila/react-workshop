@@ -30,7 +30,7 @@ import './05-state.css'
 // COMMENT_START
 // This is where you create this:
 // class ClickCounter extends Component {
-//   state: {clicks: 0}
+//   state = {clicks: 0}
 //
 //   handleButtonClick = () => {
 //     this.setState({
