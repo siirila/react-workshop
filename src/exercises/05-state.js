@@ -1,5 +1,4 @@
 import React from 'react'
-import './05-state.css'
 
 
 // So far we've just been using function components.

@@ -1,0 +1,46 @@
+exports[`test renders 1`] = `
+<StopWatch>
+  <div
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }>
+    <label
+      style={
+        Object {
+          "display": "block",
+          "fontSize": "5em",
+        }
+      } />
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#fff",
+          "border": "1px solid #ccc",
+          "fontSize": "2em",
+          "margin": "0 5px",
+          "padding": "15px",
+          "width": "200px",
+        }
+      }>
+      Start
+    </button>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#fff",
+          "border": "1px solid #ccc",
+          "fontSize": "2em",
+          "margin": "0 5px",
+          "padding": "15px",
+          "width": "200px",
+        }
+      }>
+      Clear
+    </button>
+  </div>
+</StopWatch>
+`;

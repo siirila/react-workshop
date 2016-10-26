@@ -1,5 +1,4 @@
 import React from 'react'
-import './05-state.css'
 
 
 
@@ -44,11 +43,19 @@ class StopWatch extends React.Component {
   }
 
   render() {
+    const buttonStyles = {
+      border: '1px solid #ccc',
+      background: '#fff',
+      fontSize: '2em',
+      padding: '15px',
+      margin: '0 5px',
+      width: '200px',
+    }
     return (
-      <div className="StopWatch">
-        <label>{this.state.lapse}ms</label>
-        <button onClick={this.handleRunClick}>{this.state.running ? 'Stop' : 'Start'}</button>
-        <button onClick={this.handleClearClick}>Clear</button>
+      <div style={{textAlign: 'center'}}>
+        <label style={{fontSize: '5em', display: 'block'}}>{this.state.lapse}ms</label>
+        <button style={buttonStyles} onClick={this.handleRunClick}>{this.state.running ? 'Stop' : 'Start'}</button>
+        <button style={buttonStyles} onClick={this.handleClearClick}>Clear</button>
       </div>
     )
   }

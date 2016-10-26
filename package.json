@@ -3,16 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@kadira/storybook": "2.5.2",
-    "lodash.padstart": "4.6.1",
-    "npm-run-all": "3.1.0",
-    "react-scripts": "0.4.3",
-    "split-guide": "1.1.0"
+    "@kadira/storybook": "^2.26.0",
+    "enzyme": "^2.5.1",
+    "enzyme-to-json": "^1.1.5",
+    "lodash.padstart": "^4.6.1",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.1",
+    "react-addons-test-utils": "^15.3.2",
+    "react-scripts": "^0.7.0",
+    "split-guide": "^1.1.0"
   },
   "dependencies": {
-    "font-awesome": "4.6.3",
-    "react": "15.3.2",
-    "react-dom": "15.3.2"
+    "font-awesome": "^4.7.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "scripts": {
     "watch:split:src": "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
