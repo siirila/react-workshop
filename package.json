@@ -39,6 +39,7 @@
     "build": "npm-run-all build:*",
     "build:app": "react-scripts build",
     "build:storybook": "cross-env NODE_ENV=production build-storybook --static-dir public --output-dir build/storybook",
+    "build:intro": "cpy \"intro/**/*.*\" build --parents",
     "test": "react-scripts test --env=jsdom",
     "storybook": "start-storybook --port 9009 --dont-track --config-dir ./.storybook",
     "setup": "node ./scripts/verify && node ./scripts/install && npm run validate",
