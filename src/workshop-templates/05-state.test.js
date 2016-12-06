@@ -13,15 +13,15 @@ test('no run', () => {})
 function foo() {
 // COMMENT_END
 
-test('renders', () => {
+  test('renders', () => {
   // WORKSHOP_START
   // mount the component and take a snapshot
   // WORKSHOP_END
   // FINAL_START
-  const wrapper = mount(<StopWatch />)
-  expect(mountToJson(wrapper)).toMatchSnapshot()
+    const wrapper = mount(<StopWatch />)
+    expect(mountToJson(wrapper)).toMatchSnapshot()
   // FINAL_END
-})
+  })
 
 // COMMENT_START
 }
