@@ -73,7 +73,7 @@ MIT
 [build]: https://travis-ci.org/kentcdodds/react-workshop
 [dependencyci-badge]: https://dependencyci.com/github/kentcdodds/react-workshop/badge?style=flat-square
 [dependencyci]: https://dependencyci.com/github/kentcdodds/react-workshop
-[license-badge]: https://img.shields.io/npm/l/react-workshop.svg?style=flat-square
+[license-badge]: https://img.shields.io/badge/license-MIT%20License-blue.svg?style=flat-square
 [license]: https://github.com/kentcdodds/react-workshop/blob/master/other/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
