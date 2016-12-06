@@ -1,15 +1,14 @@
-const cp = require('child_process')
-let spawn = cp.spawn, execSync = cp.execSync
+var cp = require('child_process')
+var spawn = cp.spawn, execSync = cp.execSync
 
-let useYarn = false
-
+var useYarn = false
 try {
   useYarn = !!execSync('yarn --version')
 } catch (e) {
   // use npm instead :-(
 }
 
-const installer = useYarn ? 'yarn' : 'npm'
+var installer = useYarn ? 'yarn' : 'npm'
 
 console.log('\n📦  Installing dependencies via `' + installer + ' install`')
 

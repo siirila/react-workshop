@@ -1,12 +1,12 @@
-const execSync = require('child_process').execSync
+var execSync = require('child_process').execSync
 
-const desiredVersions = {
+var desiredVersions = {
   yarn: '0.18.0',
   node: '6.0.0',
   npm: '4.0.3',
 }
 
-const errors = {
+var errors = {
   noYarn: {
     message: 'You do not have yarn installed. This is a package manager client that installs from the regular npm ' +
       'registry, but ensures you get the same versions of all dependencies required for this repository. ' +
@@ -38,34 +38,34 @@ const errors = {
   },
 }
 
-const nodeVersion = process.versions.node
+var nodeVersion = process.versions.node
 errors.oldNode.isProblem = !versionIsGreater(desiredVersions.node, nodeVersion)
 errors.oldNode.message = errors.oldNode.getMessage(desiredVersions.node, nodeVersion)
 
 try {
-  const yarnVersion = execSync('yarn --version').toString().trim()
+  var yarnVersion = execSync('yarn --version').toString().trim()
   errors.oldYarn.isProblem = !versionIsGreater(desiredVersions.yarn, yarnVersion)
   errors.oldYarn.message = errors.oldYarn.getMessage(desiredVersions.yarn, yarnVersion)
 } catch (e) {
   errors.noYarn.isProblem = true
-  const npmVersion = execSync('npm --version').toString().trim()
+  var npmVersion = execSync('npm --version').toString().trim()
   errors.oldNpm.isProblem = !versionIsGreater(desiredVersions.npm, npmVersion)
   errors.oldNpm.message = errors.oldNpm.getMessage(desiredVersions.npm, npmVersion)
 }
 
-const systemErrors = Object.keys(errors)
+var systemErrors = Object.keys(errors)
   .filter(function(key) { return errors[key].isProblem })
 
-const errorCount = systemErrors.length
+var errorCount = systemErrors.length
 
 if (errorCount) {
-  const errorMessage = systemErrors
+  var errorMessage = systemErrors
     .reduce(function(messages, key) {
       messages.push('  - ' + errors[key].message)
       return messages
     }, [])
     .join('\n')
-  const one = errorCount === 1
+  var one = errorCount === 1
 
   console.error(
     'There ' + (one ? 'is an issue' : 'are some issues') + ' with your system. ' +
@@ -78,10 +78,10 @@ if (errorCount) {
 
 // returns actualVersion >= desiredVersion
 function versionIsGreater(desiredVersion, actualVersion) {
-  const desiredVersions = /v?(\d+)\.(\d+)\.(\d+)/.exec(desiredVersion)
-  let desiredMajor = Number(desiredVersions[1]), desiredMinor = Number(desiredVersions[2]), desiredPatch = Number(desiredVersions[3])
-  const actualVersions = /v?(\d+)\.(\d+)\.(\d+)/.exec(actualVersion)
-  let actualMajor = Number(actualVersions[1]), actualMinor = Number(actualVersions[2]), actualPatch = Number(actualVersions[3])
+  var desiredVersions = /v?(\d+)\.(\d+)\.(\d+)/.exec(desiredVersion)
+  var desiredMajor = Number(desiredVersions[1]), desiredMinor = Number(desiredVersions[2]), desiredPatch = Number(desiredVersions[3])
+  var actualVersions = /v?(\d+)\.(\d+)\.(\d+)/.exec(actualVersion)
+  var actualMajor = Number(actualVersions[1]), actualMinor = Number(actualVersions[2]), actualPatch = Number(actualVersions[3])
   if (actualMajor < desiredMajor) {
     return false
   } else if (actualMajor > desiredMajor) {

@@ -17,8 +17,10 @@ cd react-workshop
 yarn run setup
 ```
 
-If you don't have `yarn` installed and don't want to use it for some reason, you can use `npm` as well.
-Instead of `yarn run setup`, run `npm run setup -- --use-npm` and enjoy waiting (and hopefully things don't break for you).
+If you don't have `yarn` installed and don't want to use it for some reason, you can use `npm` as well. Instead of
+`yarn run setup`, run `node ./scripts/install && npm run validate` and enjoy waiting (and hopefully things don't break
+for you). May be a good idea to still run `node ./scripts/verify` to verify you have the right version of other things
+too.
 
 If you have no errors, you're ready to start the workshop!
 
