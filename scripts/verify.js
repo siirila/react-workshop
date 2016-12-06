@@ -1,7 +1,7 @@
 var execSync = require('child_process').execSync
 
 var desiredVersions = {
-  yarn: '0.18.0',
+  yarn: '0.17.10',
   node: '6.0.0',
   npm: '4.0.3',
 }
