@@ -8,6 +8,15 @@
   "commit": false,
   "contributors": [
     {
+      "login": "mzabriskie",
+      "name": "Matt Zabriskie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/199035?v=3",
+      "profile": "http://twitter.com/mzabriskie",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "kentcdodds",
       "name": "Kent C. Dodds",
       "avatar_url": "https://avatars.githubusercontent.com/u/1500684?v=3",
