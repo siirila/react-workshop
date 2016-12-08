@@ -66,7 +66,8 @@ If you see any errors, read the output and try to follow any instructions. If th
 4. Composition - [`src/exercises/04-composition.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/04-composition.js)
 5. State - [`src/exercises/05-state.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/05-state.js)
 6. Data Fetching - [`src/exercises/06-data-fetching.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/06-data-fetching.js)
-7. Render Callback - [`src/exercises/07-render-callback.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/07-render-callback.js)
+7. Higher Order Components - [`src/exercises/07-hoc.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/07-hoc.js)
+8. Render Callback - [`src/exercises/08-render-callback.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/08-render-callback.js)
 
 ### Testing
 
