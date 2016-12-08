@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "husky": "^0.11.9",
+    "opt-cli": "^1.5.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
@@ -47,6 +49,7 @@
     "test": "react-scripts test --env=jsdom",
     "storybook": "start-storybook --port 9009 --dont-track --config-dir ./.storybook",
     "setup": "node ./scripts/verify && node ./scripts/install && npm run validate",
+    "precommit": "opt --in precommit --exec \"npm run validate\"",
     "validate": "cross-env CI=true npm-run-all --parallel lint test build"
   }
 }

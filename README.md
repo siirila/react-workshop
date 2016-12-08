@@ -50,6 +50,32 @@ If you want to explore a bit, there are a few things you can do:
 If you see any errors, read the output and try to follow any instructions. If that doesn't work, feel free to
 [file an issue][issues] to ask for help and I'll help if I can. Good luck!
 
+## Outline
+
+### Intro
+
+1. Bare-bones React rendering - [`intro/exercises/01-js.html`](https://github.com/kentcdodds/react-workshop/blob/master/intro/exercises/01-js.html)
+2. React rendering with JSX - [`intro/exercises/02-jsx.html`](https://github.com/kentcdodds/react-workshop/blob/master/intro/exercises/02-jsx.html)
+3. Custom React Components - [`intro/exercises/03-components.html`](https://github.com/kentcdodds/react-workshop/blob/master/intro/exercises/03-components.html)
+
+### Concepts
+
+1. Props - [`src/exercises/01-props.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/01-props.js)
+2. PropTypes - [`src/exercises/02-prop-types.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/02-prop-types.js)
+3. Styling - [`src/exercises/03-styling.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/03-styling.js)
+4. Composition - [`src/exercises/04-composition.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/04-composition.js)
+5. State - [`src/exercises/05-state.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/05-state.js)
+6. Data Fetching - [`src/exercises/06-data-fetching.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/06-data-fetching.js)
+7. Render Callback - [`src/exercises/07-render-callback.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/07-render-callback.js)
+
+### Testing
+
+Check out [react-jest-workshop](https://github.com/kentcdodds/react-jest-workshop)
+
+### Architecture/Applications
+
+Check out [react-github-profile](https://github.com/kentcdodds/react-github-profile)
+
 ## Contributors
 
 Thanks goes to these people ([emoji key][emojis]):
