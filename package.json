@@ -17,9 +17,11 @@
     "eslint-plugin-babel": "^4.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.8.0",
+    "husky": "^0.11.9",
     "lodash.padstart": "^4.6.1",
     "nodemon": "^1.11.0",
     "npm-run-all": "^3.1.2",
+    "opt-cli": "^1.5.1",
     "react-addons-test-utils": "^15.4.1",
     "react-router": "^4.0.0-alpha.6",
     "react-scripts": "^0.8.1",
@@ -28,8 +30,6 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "husky": "^0.11.9",
-    "opt-cli": "^1.5.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
