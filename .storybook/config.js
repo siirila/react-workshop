@@ -12,6 +12,7 @@ function loadStories() {
     .add('composition', require('../src/exercises/04-composition').example)
     .add('state', require('../src/exercises/05-state').example)
     .add('data-fetching', require('../src/exercises/06-data-fetching').example)
+    .add('render-callback', require('../src/exercises/07-render-callback').example)
   
   storiesOf('Finished Exercises', module)
     .add('props', require('../src/exercises-final/01-props').example)
@@ -20,4 +21,5 @@ function loadStories() {
     .add('composition', require('../src/exercises-final/04-composition').example)
     .add('state', require('../src/exercises-final/05-state').example)
     .add('data-fetching', require('../src/exercises-final/06-data-fetching').example)
+    .add('render-callback', require('../src/exercises-final/07-render-callback').example)
 }

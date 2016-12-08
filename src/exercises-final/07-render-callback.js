@@ -1,12 +1,14 @@
 import React, {PropTypes, Component} from 'react'
 import axios from 'axios'
 
-class RepoListContainer extends Component {
+class FetchRepoList extends Component {
   static propTypes = {
-    username: PropTypes.string.isRequired,
+    username: PropTypes.string,
     fetch: PropTypes.func,
   }
-  static defaultProps = { fetch: axios.get }
+  static defaultProps = {
+    fetch: axios.get,
+  }
   state = {repos: null, loading: false, error: null}
 
   componentDidMount() {
@@ -21,23 +23,31 @@ class RepoListContainer extends Component {
         error => this.setState({repos: null, error, loading: false})
       )
   }
-
   render() {
-    const {repos, loading, error} = this.state
-    const {username} = this.props
-    return (
-      <div>
-        {!loading ? null : <div>Loading...</div>}
-        {!error ? null : (
-          <div>
-            Error loading info for <code>{username}</code>
-            <pre>{JSON.stringify(error, null, 2)}</pre>
-          </div>
-        )}
-        {!repos ? null : <RepoList username={username} repos={repos} />}
-      </div>
-    )
+    return this.props.children(this.state)
   }
+}
+
+function RepoListContainer({username, ...rest}) {
+  return (
+    <FetchRepoList username={username} {...rest}>
+      {({repos, loading, error}) => (
+        <div>
+          {!loading ? null : <div>Loading...</div>}
+          {!error ? null : (
+            <div>
+              Error loading info for <code>{username}</code>
+              <pre>{JSON.stringify(error, null, 2)}</pre>
+            </div>
+          )}
+          {!repos ? null : <RepoList username={username} repos={repos} />}
+        </div>
+      )}
+    </FetchRepoList>
+  )
+}
+RepoListContainer.propTypes = {
+  username: PropTypes.string,
 }
 
 function RepoList({username, repos}) {
