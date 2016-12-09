@@ -1,20 +1,23 @@
 import React, {Component, PropTypes} from 'react'
 
-// Pretty much every application is going to need to do something with forms
-// There are two ways to handle forms elements with React.
-// First, there's Uncontrolled inputs. They're arguably easier, but less powerful.
+// For controlled components, the idea is that you push the values from the component
+// to the consumer via callback handlers. In the context of a form, this is normally
+// via `onChange` which receives the `event` (and you can get the value via
+// `event.target.value`) like so:
 //
-// The basic idea of uncontrolled components is you pull the value out of the DOM
-// element when you need it. To do this, you need to get a reference to the element.
-// You can either get a reference via an event handler `event` argument (`event.target`),
-// or by using the special `ref` prop on the element like so:
+//     <input onChange={event => console.log(event.target.value)} />
 //
-//     <input ref={node => this.input = node} />
+// In this scenario, you also need to provide the value for the input like so:
 //
-// From there you can reference the input node elsewhere in your component methods.
+//     <input value={this.state.value} />
+//
+// This gives you a lot more power over the input. This is not like your ng-model
+// from Angular. It's a little more low-level than that. But this control is really nice
+// and building up from here is just a matter of writing some JavaScript :)
 //
 // Exercise
 //   Render a form with an onSubmit handler that alerts the value of an input
+//   Keep track of the value as the user types
 //   Render a red error message via `this.props.getErrorMessage(value)` if one is returned, otherwise render the submit button
 //   Don't let the user submit the form if there's an error
 //
