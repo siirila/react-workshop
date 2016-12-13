@@ -17,9 +17,9 @@ function loadStories() {
     .add('9. Data Fetching', require('../src/exercises/09-data-fetching').example)
     .add('10. Higher Order Component', require('../src/exercises/10-hoc').example)
     .add('11. Render Callback', require('../src/exercises/11-render-callback').example)
-    .add('12. Context', require('../src/exercises/12-context').example)
-    .add('13. cloneElement', require('../src/exercises/13-clone-element').example)
-    .add('14. React.Children', require('../src/exercises/14-react-children').example)
+    // .add('12. Context', require('../src/exercises/12-context').example)
+    // .add('13. cloneElement', require('../src/exercises/13-clone-element').example)
+    // .add('14. React.Children', require('../src/exercises/14-react-children').example)
 
   storiesOf('Finished Exercises', module)
     .add('1. Props', require('../src/exercises-final/01-props').example)
@@ -33,7 +33,7 @@ function loadStories() {
     .add('9. Data Fetching', require('../src/exercises-final/09-data-fetching').example)
     .add('10. Higher Order Component', require('../src/exercises-final/10-hoc').example)
     .add('11. Render Callback', require('../src/exercises-final/11-render-callback').example)
-    .add('12. Context', require('../src/exercises-final/12-context').example)
-    .add('13. cloneElement', require('../src/exercises-final/13-clone-element').example)
-    .add('14. React.Children', require('../src/exercises-final/14-react-children').example)
+    // .add('12. Context', require('../src/exercises-final/12-context').example)
+    // .add('13. cloneElement', require('../src/exercises-final/13-clone-element').example)
+    // .add('14. React.Children', require('../src/exercises-final/14-react-children').example)
 }
