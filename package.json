@@ -34,6 +34,7 @@
     "react-dom": "^15.4.1"
   },
   "scripts": {
+    "develop": "npm-run-all --parallel watch:split:src storybook",
     "add-contributor": "all-contributors add",
     "generate-contributors": "all-contributors generate",
     "watch:split:src": "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
