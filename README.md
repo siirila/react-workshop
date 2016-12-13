@@ -17,6 +17,7 @@
 - [Create React App][create-react-app].
 - [Matt Zabriskie][matt] for his [react-workshop][original-repo] upon which this one is based.
 - [KADIRA][kadira] for their [react-storybook][storybook]
+- [React Docs](http://facebook.github.io/react). Several examples have been lifted from there.
 
 ## Setup
 
@@ -57,6 +58,7 @@ If you see any errors, read the output and try to follow any instructions. If th
 1. Bare-bones React rendering - [`intro/exercises/01-js.html`](https://github.com/kentcdodds/react-workshop/blob/master/intro/exercises/01-js.html)
 2. React rendering with JSX - [`intro/exercises/02-jsx.html`](https://github.com/kentcdodds/react-workshop/blob/master/intro/exercises/02-jsx.html)
 3. Custom React Components - [`intro/exercises/03-components.html`](https://github.com/kentcdodds/react-workshop/blob/master/intro/exercises/03-components.html)
+4. Re-rendering - [`intro/exercises/04-re-rendering.html`](https://github.com/kentcdodds/react-workshop/blob/master/intro/exercises/04-re-rendering.html)
 
 ### Concepts
 
