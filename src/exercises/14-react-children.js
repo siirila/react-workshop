@@ -6,6 +6,5 @@ export const example = () => (
 
 /*
 eslint
-jsx-a11y/alt-text: 0,
 no-unused-vars: 0,
 */
