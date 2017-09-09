@@ -147,3 +147,10 @@ export const example = () => (
 )
 
 export default StopWatch
+
+// WORKSHOP_START
+/*
+eslint
+no-unused-vars: 0,
+*/
+// WORKSHOP_END

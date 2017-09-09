@@ -26,28 +26,25 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "eslintIgnore": [
-    "build",
-    "node_modules",
-    "src/workshop-templates",
-    "intro/*.min.js",
-    "scripts/workshop-setup.js"
-  ],
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
     "lint": "kcd-scripts lint",
     "develop": "npm run -s watch:split:src",
-    "watch:split:src": "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
+    "watch:split:src":
+      "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
     "split": "npm-run-all --parallel split:*",
-    "split:src": "cd src && split-guide generate --templates-dir workshop-templates",
-    "split:intro": "cd intro && split-guide generate --templates-dir workshop-templates",
+    "split:src":
+      "cd src && split-guide generate --templates-dir workshop-templates",
+    "split:intro":
+      "cd intro && split-guide generate --templates-dir workshop-templates",
     "start": "react-scripts start",
     "build": "npm-run-all build:*",
     "build:app": "react-scripts build",
     "build:intro": "cpy \"intro/**/*.*\" build --parents",
-    "setup": "node ./scripts/verify && node ./scripts/install && npm run validate -s",
+    "setup":
+      "node ./scripts/verify && node ./scripts/install && npm run validate -s",
     "format": "kcd-scripts format \"**/*.js\"",
     "precommit": "npm run format && npm run validate",
-    "validate": "kcd-scripts validate"
+    "validate": "npm run split && kcd-scripts validate"
   }
 }

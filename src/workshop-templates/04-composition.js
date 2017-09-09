@@ -43,6 +43,7 @@ function Avatar(props) {
     <img
       src={props.url}
       className="Avatar"
+      alt="user avatar"
       style={{
         width: props.size,
         height: props.size,
@@ -98,3 +99,10 @@ export const example = () => (
 // FINAL_END
 
 export default Person
+
+// WORKSHOP_START
+/*
+eslint
+no-unused-vars: 0,
+*/
+// WORKSHOP_END

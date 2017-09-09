@@ -233,3 +233,10 @@ function mockFetch() {
 }
 
 export default RepoListContainer
+
+// WORKSHOP_START
+/*
+eslint
+no-unused-vars: 0,
+*/
+// WORKSHOP_END

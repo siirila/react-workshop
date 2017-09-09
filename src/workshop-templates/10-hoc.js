@@ -221,9 +221,15 @@ function mockFetch() {
   })
 }
 
-// WORKSHOP_START
-export default RepoListContainer
-// WORKSHOP_END
 // FINAL_START
 export default WrappedRepoListContainer
 // FINAL_END
+
+// WORKSHOP_START
+export default RepoListContainer
+
+/*
+eslint
+no-unused-vars: 0,
+*/
+// WORKSHOP_END

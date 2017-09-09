@@ -65,3 +65,8 @@ function List() {
 export default Exercises
 
 export {List}
+
+/*
+eslint
+no-unused-vars: 0,
+*/

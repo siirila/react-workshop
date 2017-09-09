@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
-class NameForm extends React.Component {
+class NameForm extends Component {
   state = {value: ''}
   static propTypes = {
     getErrorMessage: PropTypes.func.isRequired,
@@ -37,7 +37,7 @@ class NameForm extends React.Component {
           Name:
           <input
             type="text"
-            value={this.state.value}
+            value={value}
             onChange={this.handleChange}
           />
         </label>
@@ -66,3 +66,4 @@ export const example = () => (
 )
 
 export default NameForm
+

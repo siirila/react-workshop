@@ -68,3 +68,10 @@ export const example = () => (
 // FINAL_END
 
 export default Box
+
+// WORKSHOP_START
+/*
+eslint
+no-unused-vars: 0,
+*/
+// WORKSHOP_END

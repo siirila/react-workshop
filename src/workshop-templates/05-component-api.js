@@ -156,7 +156,6 @@ class ContrivedComponentContainer extends Component {
   state = {
     renderChild: true,
     count: 0,
-    incrementCount: true,
     shouldChildUpdate: true,
   }
   _childState = null
@@ -190,7 +189,7 @@ class ContrivedComponentContainer extends Component {
     })
   }
   render() {
-    const {renderChild, incrementCount, shouldChildUpdate} = this.state
+    const {renderChild, shouldChildUpdate} = this.state
     return (
       <div>
         <div style={{fontSize: '2em', fontWeight: 'bold'}}>
@@ -250,6 +249,10 @@ export default ContrivedComponentContainer
 // FINAL_END
 
 // WORKSHOP_START
-// eslint-disable-next-line
 export const example = () => <div>Just look at the final</div>
+
+/*
+eslint
+no-unused-vars: 0,
+*/
 // WORKSHOP_END

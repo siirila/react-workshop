@@ -155,7 +155,6 @@ class ContrivedComponentContainer extends Component {
   state = {
     renderChild: true,
     count: 0,
-    incrementCount: true,
     shouldChildUpdate: true,
   }
   _childState = null
@@ -189,7 +188,7 @@ class ContrivedComponentContainer extends Component {
     })
   }
   render() {
-    const {renderChild, incrementCount, shouldChildUpdate} = this.state
+    const {renderChild, shouldChildUpdate} = this.state
     return (
       <div>
         <div style={{fontSize: '2em', fontWeight: 'bold'}}>
@@ -246,3 +245,4 @@ class ContrivedComponentContainer extends Component {
 export const example = () => <ContrivedComponentContainer />
 
 export default ContrivedComponentContainer
+

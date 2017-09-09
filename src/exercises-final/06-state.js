@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 class StopWatch extends React.Component {
   state = {
     running: false,
@@ -55,21 +57,18 @@ class StopWatch extends React.Component {
     }
     return (
       <div style={{textAlign: 'center'}}>
-        <label style={{fontSize: '5em', display: 'block'}}>
-          {this.state.lapse}ms
-        </label>
-        <button style={buttonStyles} onClick={this.handleRunClick}>
-          {this.state.running ? 'Stop' : 'Start'}
-        </button>
-        <button style={buttonStyles} onClick={this.handleClearClick}>
-          Clear
-        </button>
+        <label style={{fontSize: '5em', display: 'block'}}>{this.state.lapse}ms</label>
+        <button style={buttonStyles} onClick={this.handleRunClick}>{this.state.running ? 'Stop' : 'Start'}</button>
+        <button style={buttonStyles} onClick={this.handleClearClick}>Clear</button>
       </div>
     )
   }
 }
 
 // We don't need to do anything fancy here even with props, because the <StopWatch /> component tracks its own state!
-export const example = () => <StopWatch />
+export const example = () => (
+  <StopWatch />
+)
 
 export default StopWatch
+

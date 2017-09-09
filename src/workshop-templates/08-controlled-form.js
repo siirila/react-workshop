@@ -27,7 +27,7 @@ import PropTypes from 'prop-types'
 // - You'll want to keep `error` in state so you can check it when the form is submitted.
 
 // WORKSHOP_END
-class NameForm extends React.Component {
+class NameForm extends Component {
   // FINAL_START
   state = {value: ''}
   static propTypes = {
@@ -69,7 +69,7 @@ class NameForm extends React.Component {
           Name:
           <input
             type="text"
-            value={this.state.value}
+            value={value}
             onChange={this.handleChange}
           />
         </label>
@@ -99,3 +99,10 @@ export const example = () => (
 )
 
 export default NameForm
+
+// WORKSHOP_START
+/*
+eslint
+no-unused-vars: 0,
+*/
+// WORKSHOP_END

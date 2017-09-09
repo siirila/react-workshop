@@ -172,3 +172,8 @@ function mockFetch() {
 }
 
 export default RepoListContainer
+
+/*
+eslint
+no-unused-vars: 0,
+*/

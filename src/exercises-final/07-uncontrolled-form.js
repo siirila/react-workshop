@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 class NameForm extends Component {
   static propTypes = {
-    defaultName: PropTypes.string,
+    defaultName: PropTypes.string
   }
 
   handleSubmit = event => {
-    alert(`A name was submitted: ${this.input.value}`) // eslint-disable-line no-alert
+    alert(`A name was submitted: ${ this.input.value}`) // eslint-disable-line no-alert
     event.preventDefault()
   }
 
@@ -28,6 +28,9 @@ class NameForm extends Component {
   }
 }
 
-export const example = () => <NameForm defaultName="Marcy" />
+export const example = () => (
+  <NameForm defaultName="Marcy" />
+)
 
 export default NameForm
+

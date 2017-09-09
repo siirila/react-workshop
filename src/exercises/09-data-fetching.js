@@ -65,21 +65,25 @@ class RepoListContainer extends Component {
   render() {
     return (
       <div>
-        User repos! Render RepoList in here. For extra credit, you should handle
-        loading and error state as well.
+        User repos! Render RepoList in here.
+        For extra credit, you should handle loading and error state as well.
       </div>
     )
   }
 }
 
 function RepoList({username, repos}) {
-  return <div>render the user's name in an h1 and the repos in ul>li</div>
+  return (
+    <div>render the user's name in an h1 and the repos in ul>li</div>
+  )
 }
 RepoList.propTypes = {
   // add prop types for username and repos
 }
 
-export const example = () => <div>Render the RepoListContainer here</div>
+export const example = () => (
+  <div>Render the RepoListContainer here</div>
+)
 
 // This is for you. Merry Christmas 🎅 🎄 🎁
 function mockFetch() {
@@ -98,7 +102,7 @@ function mockFetch() {
             {id: 12345, name: 'turbo-sniffle'},
             {id: 54321, name: 'ubiquitous-succotash'},
             {id: 43234, name: 'solid-waffle'},
-          ],
+          ]
         })
       }
     }, delay)
@@ -106,3 +110,8 @@ function mockFetch() {
 }
 
 export default RepoListContainer
+
+/*
+eslint
+no-unused-vars: 0,
+*/

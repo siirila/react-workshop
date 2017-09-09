@@ -25,7 +25,7 @@ import PropTypes from 'prop-types'
 // Tips:
 // - You'll want to keep `error` in state so you can check it when the form is submitted.
 
-class NameForm extends React.Component {
+class NameForm extends Component {
   render() {
     return <div>Give it a go!</div>
   }
@@ -46,3 +46,8 @@ export const example = () => (
 )
 
 export default NameForm
+
+/*
+eslint
+no-unused-vars: 0,
+*/
