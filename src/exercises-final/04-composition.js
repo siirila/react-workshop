@@ -11,10 +11,10 @@ function Person(props) {
       <em>{props.title}</em>
       <ul>
         <li>
-          <Icon href={`https://twitter.com/${props.twitter}`} type="twitter"/>
+          <Icon href={`https://twitter.com/${props.twitter}`} type="twitter" />
         </li>
         <li>
-          <Icon href={`https://github.com/${props.github}`} type="github"/>
+          <Icon href={`https://github.com/${props.github}`} type="github" />
         </li>
       </ul>
     </div>
@@ -39,7 +39,7 @@ function Avatar(props) {
       style={{
         width: props.size,
         height: props.size,
-        borderRadius: props.size / 2
+        borderRadius: props.size / 2,
       }}
     />
   )
@@ -60,14 +60,14 @@ Avatar.propTypes = {
 function Icon(props) {
   return (
     <a href={props.href} target="_blank" className="Icon">
-      <i className={`fa fa-${props.type}`}/>
+      <i className={`fa fa-${props.type}`} />
     </a>
   )
 }
 
 Icon.propTypes = {
   href: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
 }
 
 export const example = () => (
@@ -81,4 +81,3 @@ export const example = () => (
 )
 
 export default Person
-

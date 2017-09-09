@@ -245,4 +245,3 @@ class ContrivedComponentContainer extends Component {
 export const example = () => <ContrivedComponentContainer />
 
 export default ContrivedComponentContainer
-

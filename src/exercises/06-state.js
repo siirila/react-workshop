@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 // So far we've just been using function components.
 // Now that we need to worry about state in our component, we need to use the ES6 class syntax.
 // To turn an ES6 class into a React component, you extend React.Component
@@ -67,16 +66,12 @@ class StopWatch extends React.Component {
   // Public Class Fields. And you'll also need to have start and stop methods
   // which your click handlers will use to start and stop the setInterval
   render() {
-    return (
-      <div>Stop Watch!</div>
-    )
+    return <div>Stop Watch!</div>
   }
 }
 
 // We don't need to do anything fancy here even with props, because the <StopWatch /> component tracks its own state!
-export const example = () => (
-  <StopWatch />
-)
+export const example = () => <StopWatch />
 
 export default StopWatch
 

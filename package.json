@@ -45,7 +45,7 @@
       "node ./scripts/verify && node ./scripts/install && npm run validate -s",
     "format": "kcd-scripts format \"**/*.js\"",
     "precommit":
-      "npm run split && git add src/exercises src/exercises-final && npm run format && npm run validate",
+      "npm run split && npm run format && git add src/exercises src/exercises-final && npm run validate",
     "validate": "kcd-scripts validate"
   }
 }

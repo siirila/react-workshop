@@ -19,26 +19,16 @@ Box.propTypes = {
 
 export const example = () => (
   <div>
-    <Box
-      size="small"
-      style={{backgroundColor: 'lightblue'}}
-    >
+    <Box size="small" style={{backgroundColor: 'lightblue'}}>
       I'm in a small box!
     </Box>
-    <Box
-      size="medium"
-      style={{backgroundColor: 'lightgreen'}}
-    >
+    <Box size="medium" style={{backgroundColor: 'lightgreen'}}>
       I'm in a medium box!
     </Box>
-    <Box
-      size="large"
-      style={{backgroundColor: 'orange'}}
-    >
+    <Box size="large" style={{backgroundColor: 'orange'}}>
       I'm in a large box!
     </Box>
   </div>
 )
 
 export default Box
-

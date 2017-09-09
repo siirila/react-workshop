@@ -4,7 +4,9 @@ import PropTypes from 'prop-types'
 
 function SayHello(props) {
   return (
-    <div>Hello {props.firstName} {props.lastName}!</div>
+    <div>
+      Hello {props.firstName} {props.lastName}!
+    </div>
   )
 }
 
@@ -13,9 +15,6 @@ SayHello.propTypes = {
   lastName: PropTypes.string.isRequired,
 }
 
-export const example = () => (
-  <SayHello firstName="Jill" lastName="Mayfield" />
-)
+export const example = () => <SayHello firstName="Jill" lastName="Mayfield" />
 
 export default SayHello
-

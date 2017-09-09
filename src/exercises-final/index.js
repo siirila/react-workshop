@@ -65,4 +65,3 @@ function List() {
 export default Exercises
 
 export {List}
-

@@ -22,9 +22,8 @@ Box.propTypes = {
 
 export const example = () => (
   <div>
-    Examples go in here...
-    Give me 3 usages of your {`<Box>`} component. One for each size.
-    And for each, specify a `style` prop with some custom styling
+    Examples go in here... Give me 3 usages of your {`<Box>`} component. One for
+    each size. And for each, specify a `style` prop with some custom styling
     (whatever you want, maybe consider `backgroundColor`)
   </div>
 )
