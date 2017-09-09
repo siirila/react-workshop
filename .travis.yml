@@ -1,9 +1,9 @@
 language: node_js
-node_js: 6
-script: yarn run setup
+node_js: 8
+install: npm run setup
+script: echo "it worked!"
 cache:
-  yarn: true
   directories:
-    - node_modules
+    - ~/.npm
 notifications:
   email: false
