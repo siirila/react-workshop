@@ -3,32 +3,40 @@
   "version": "0.1.0",
   "homepage": "https://react-workshop.netlify.com/",
   "private": true,
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.8.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2",
+    "webpack": "^3.5.6"
+  },
   "devDependencies": {
-    "@storybook/react": "^3.2.8",
     "axios": "^0.16.2",
     "cpy-cli": "^1.0.1",
-    "cross-env": "^5.0.5",
-    "enzyme": "^2.9.1",
-    "enzyme-to-json": "^1.5.1",
-    "kcd-scripts": "^0.6.2",
-    "lodash.padstart": "^4.6.1",
+    "kcd-scripts": "^0.8.3",
     "nodemon": "^1.12.0",
     "npm-run-all": "^4.1.1",
-    "react-addons-test-utils": "^15.6.0",
     "react-router": "^4.2.0",
     "react-scripts": "^1.0.13",
     "split-guide": "^3.0.0"
   },
-  "dependencies": {
-    "font-awesome": "^4.7.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+  "eslintConfig": {
+    "extends": "react-app"
   },
+  "eslintIgnore": [
+    "build",
+    "node_modules",
+    "src/workshop-templates",
+    "intro/*.min.js",
+    "scripts/workshop-setup.js"
+  ],
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
     "lint": "kcd-scripts lint",
-    "develop": "npm-run-all --parallel watch:split:src storybook",
-    "generate-contributors": "all-contributors generate",
+    "develop": "npm run -s watch:split:src",
     "watch:split:src": "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
     "split": "npm-run-all --parallel split:*",
     "split:src": "cd src && split-guide generate --templates-dir workshop-templates",
@@ -36,11 +44,10 @@
     "start": "react-scripts start",
     "build": "npm-run-all build:*",
     "build:app": "react-scripts build",
-    "build:storybook": "cross-env NODE_ENV=production build-storybook --static-dir public --output-dir build/storybook",
     "build:intro": "cpy \"intro/**/*.*\" build --parents",
-    "storybook": "start-storybook --port 9009 --dont-track --config-dir ./.storybook",
-    "setup": "node ./scripts/verify && node ./scripts/install && npm run validate",
-    "precommit": "kcd-scripts precommit",
+    "setup": "node ./scripts/verify && node ./scripts/install && npm run validate -s",
+    "format": "kcd-scripts format \"**/*.js\"",
+    "precommit": "npm run format && npm run validate",
     "validate": "kcd-scripts validate"
   }
 }

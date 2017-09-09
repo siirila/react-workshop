@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 
 // WORKSHOP_START
@@ -77,11 +78,11 @@ class RepoListContainer extends Component {
   }
   static defaultProps = { fetch: axios.get }
   state = {repos: null, loading: false, error: null}
-  
+
   componentDidMount() {
     this.fetchRepos()
   }
-  
+
   fetchRepos() {
     this.setState({repos: null, loading: true, error: null})
     this.props.fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=100&sort=pushed`)
@@ -90,7 +91,7 @@ class RepoListContainer extends Component {
         error => this.setState({repos: null, error, loading: false})
       )
   }
-  
+
   render() {
     const {repos, loading, error} = this.state
     const {username} = this.props
@@ -122,11 +123,11 @@ function fetchDataComponent(Comp) {
       fetch: axios.get,
     }
     state = {repos: null, loading: false, error: null}
-    
+
     componentDidMount() {
       this.fetchRepos()
     }
-    
+
     fetchRepos() {
       this.setState({repos: null, loading: true, error: null})
       this.props.fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=100&sort=pushed`)

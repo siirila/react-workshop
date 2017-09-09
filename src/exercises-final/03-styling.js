@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import './03-styling.css'
 
 function Box(props) {
@@ -18,22 +19,13 @@ Box.propTypes = {
 
 export const example = () => (
   <div>
-    <Box
-      size="small"
-      style={{backgroundColor: 'lightblue'}}
-    >
+    <Box size="small" style={{backgroundColor: 'lightblue'}}>
       I'm in a small box!
     </Box>
-    <Box
-      size="medium"
-      style={{backgroundColor: 'lightgreen'}}
-    >
+    <Box size="medium" style={{backgroundColor: 'lightgreen'}}>
       I'm in a medium box!
     </Box>
-    <Box
-      size="large"
-      style={{backgroundColor: 'orange'}}
-    >
+    <Box size="large" style={{backgroundColor: 'orange'}}>
       I'm in a large box!
     </Box>
   </div>

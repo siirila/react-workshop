@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
 // WORKSHOP_START
 // Pretty much every application is going to need to do something with forms
@@ -33,7 +34,7 @@ class NameForm extends Component {
     alert(`A name was submitted: ${ this.input.value}`) // eslint-disable-line no-alert
     event.preventDefault()
   }
-  
+
   // FINAL_END
   render() {
     // WORKSHOP_START

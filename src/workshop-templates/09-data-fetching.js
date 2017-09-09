@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 // WORKSHOP_START
 // for our data fetching needs, we're going to use axios.get (imported above)

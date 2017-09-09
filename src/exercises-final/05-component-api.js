@@ -1,11 +1,12 @@
-import React, {PropTypes, Component} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
 class ContrivedComponent extends Component {
   static contextTypes = {color: PropTypes.string} // used to have access to context. You wont use this much...
   static defaultProps = {setExternalState: () => {}}
   static propTypes = {setExternalState: PropTypes.func}
   state = {clicks: 0} // can also be initialized in the constructor
-  
+
   /**
    * often you don't need a constructor
    * and most of the time you want to avoid doing things with props in here
@@ -133,7 +134,8 @@ class ContrivedComponent extends Component {
         Hi! I'm the child. Here are my props:
         <pre>{JSON.stringify(this.props, null, 2)}</pre>
         <div>
-          <button onClick={this.onButtonClick}>Click me</button> to update state. Clicks: {clicks}
+          <button onClick={this.onButtonClick}>Click me</button> to update
+          state. Clicks: {clicks}
         </div>
         <div>
           <button onClick={this.onForceUpdateClick}>Force update</button>
@@ -150,7 +152,12 @@ class ContrivedComponentContainer extends Component {
     return {color: 'purple'}
   }
 
-  state = {renderChild: true, count: 0, incrementCount: true, shouldChildUpdate: true}
+  state = {
+    renderChild: true,
+    count: 0,
+    incrementCount: true,
+    shouldChildUpdate: true,
+  }
   _childState = null
   componentWillMount() {
     console.groupCollapsed('mounting -> mounted')
@@ -185,18 +192,24 @@ class ContrivedComponentContainer extends Component {
     const {renderChild, incrementCount, shouldChildUpdate} = this.state
     return (
       <div>
-        <div style={{fontSize: '2em', fontWeight: 'bold'}}>Hi! I'm a contrived component</div>
+        <div style={{fontSize: '2em', fontWeight: 'bold'}}>
+          Hi! I'm a contrived component
+        </div>
         <div style={{fontSize: '1.5em'}}>
-          Don't worry, you don't have to do anything with this one. Just explore the code :)
+          Don't worry, you don't have to do anything with this one. Just explore
+          the code :)
         </div>
         <div>
-          I'm here to teach you about the component API!
-          I'll update every time you click this button to show you what lifecycle events have happened on my child component:
+          I'm here to teach you about the component API! I'll update every time
+          you click this button to show you what lifecycle events have happened
+          on my child component:
         </div>
         <div>
           <button onClick={this.increment}>Increment Count</button>
         </div>
-        <div>Also, check out the console which may be slightly more instructive :)</div>
+        <div>
+          Also, check out the console which may be slightly more instructive :)
+        </div>
         <div>
           <label>
             Unmount child:
@@ -230,8 +243,6 @@ class ContrivedComponentContainer extends Component {
   }
 }
 
-export const example = () => (
-  <ContrivedComponentContainer />
-)
+export const example = () => <ContrivedComponentContainer />
 
 export default ContrivedComponentContainer

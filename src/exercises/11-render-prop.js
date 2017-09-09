@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 // Higher Order components are great, but they suffer from a few short-comings:
 // 1. You must create a component to pass to the HoC function
@@ -11,7 +12,7 @@ import axios from 'axios'
 // As of version 4 (alpha) of react-router, it follows this pattern.
 //
 // In this exercise, we're going to refactor the data-fetching example code to keep all the
-// state and imparative code in one component, and all the UI rendering in a stateless,
+// state and imperative code in one component, and all the UI rendering in a stateless,
 // declarative function component.
 //
 // Example:
@@ -60,7 +61,7 @@ import axios from 'axios'
 //
 // Ultimately, you can take this further to a generic Fetch component which can making
 // subsequent requests on prop changes, caching, multiple requests in parallel, etc.
-// Then you can write all your imparative tests around that generic Fetch component
+// Then you can write all your imperative tests around that generic Fetch component
 // and the rest of your components can be much more declarative and more easily tested
 //
 // Exercise:
@@ -72,6 +73,7 @@ class FetchRepoList extends Component {
   // put all the state related stuff in this component
   // and pass the state to the `children` render callback in `render`
   render() {
+    return null
   }
 }
 
@@ -81,7 +83,7 @@ class RepoListContainer extends Component {
     username: PropTypes.string.isRequired,
     fetch: PropTypes.func,
   }
-  static defaultProps = { fetch: axios.get }
+  static defaultProps = {fetch: axios.get}
   state = {repos: null, loading: false, error: null}
 
   componentDidMount() {
@@ -90,10 +92,14 @@ class RepoListContainer extends Component {
 
   fetchRepos() {
     this.setState({repos: null, loading: true, error: null})
-    this.props.fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=100&sort=pushed`)
+    this.props
+      .fetch(
+        `https://api.github.com/users/${this.props
+          .username}/repos?per_page=100&sort=pushed`,
+      )
       .then(
         ({data: repos}) => this.setState({repos, error: null, loading: false}),
-        error => this.setState({repos: null, error, loading: false})
+        error => this.setState({repos: null, error, loading: false}),
       )
   }
 
@@ -120,7 +126,7 @@ function RepoList({username, repos}) {
     <div>
       <h1>{username}'s repos</h1>
       <ul style={{textAlign: 'left'}}>
-        {repos.map((repo) => {
+        {repos.map(repo => {
           return <li key={repo.id}>{repo.name}</li>
         })}
       </ul>
@@ -129,10 +135,12 @@ function RepoList({username, repos}) {
 }
 RepoList.propTypes = {
   username: PropTypes.string.isRequired,
-  repos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  })).isRequired,
+  repos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 }
 
 export const example = () => (
@@ -156,7 +164,7 @@ function mockFetch() {
             {id: 12345, name: 'turbo-sniffle'},
             {id: 54321, name: 'ubiquitous-succotash'},
             {id: 43234, name: 'solid-waffle'},
-          ]
+          ],
         })
       }
     }, delay)

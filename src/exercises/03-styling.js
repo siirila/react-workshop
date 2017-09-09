@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 // import the css styles using: `import './03-styling.css'`
 // this will use webpack to load the css styles into your app.
 
@@ -21,9 +22,8 @@ Box.propTypes = {
 
 export const example = () => (
   <div>
-    Examples go in here...
-    Give me 3 usages of your {`<Box>`} component. One for each size.
-    And for each, specify a `style` prop with some custom styling
+    Examples go in here... Give me 3 usages of your {`<Box>`} component. One for
+    each size. And for each, specify a `style` prop with some custom styling
     (whatever you want, maybe consider `backgroundColor`)
   </div>
 )

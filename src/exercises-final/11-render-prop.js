@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 
 class FetchRepoList extends Component {
@@ -17,10 +18,14 @@ class FetchRepoList extends Component {
 
   fetchRepos() {
     this.setState({repos: null, loading: true, error: null})
-    this.props.fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=100&sort=pushed`)
+    this.props
+      .fetch(
+        `https://api.github.com/users/${this.props
+          .username}/repos?per_page=100&sort=pushed`,
+      )
       .then(
         ({data: repos}) => this.setState({repos, error: null, loading: false}),
-        error => this.setState({repos: null, error, loading: false})
+        error => this.setState({repos: null, error, loading: false}),
       )
   }
   render() {
@@ -55,7 +60,7 @@ function RepoList({username, repos}) {
     <div>
       <h1>{username}'s repos</h1>
       <ul style={{textAlign: 'left'}}>
-        {repos.map((repo) => {
+        {repos.map(repo => {
           return <li key={repo.id}>{repo.name}</li>
         })}
       </ul>
@@ -64,10 +69,12 @@ function RepoList({username, repos}) {
 }
 RepoList.propTypes = {
   username: PropTypes.string.isRequired,
-  repos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  })).isRequired,
+  repos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 }
 
 export const example = () => (
@@ -91,7 +98,7 @@ function mockFetch() {
             {id: 12345, name: 'turbo-sniffle'},
             {id: 54321, name: 'ubiquitous-succotash'},
             {id: 43234, name: 'solid-waffle'},
-          ]
+          ],
         })
       }
     }, delay)

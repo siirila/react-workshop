@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
 // Pretty much every application is going to need to do something with forms
 // There are two ways to handle forms elements with React.
@@ -27,8 +28,6 @@ class NameForm extends Component {
   }
 }
 
-export const example = () => (
-  <NameForm />
-)
+export const example = () => <NameForm />
 
 export default NameForm

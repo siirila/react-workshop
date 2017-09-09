@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
 class NameForm extends React.Component {
   state = {value: ''}
@@ -19,7 +20,7 @@ class NameForm extends React.Component {
     if (!this.state.error) {
       alert(`A name was submitted: ${this.state.value}`) // eslint-disable-line no-alert
     }
-    event.preventDefault();
+    event.preventDefault()
   }
 
   onValueChange(value = this.state.value) {
@@ -43,10 +44,7 @@ class NameForm extends React.Component {
         {hasError ? (
           <div style={{color: 'red'}}>{error}</div>
         ) : (
-          <input
-            type="submit"
-            value="Submit"
-          />
+          <input type="submit" value="Submit" />
         )}
       </form>
     )

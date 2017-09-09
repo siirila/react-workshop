@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
 // For controlled components, the idea is that you push the values from the component
 // to the consumer via callback handlers. In the context of a form, this is normally

@@ -1,0 +1,5 @@
+src/workshop-templates/**/*
+intro/*.min.js
+scripts/workshop-setup.js
+build/**/*
+node_modules/**/*

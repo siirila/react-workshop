@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import 'font-awesome/css/font-awesome.min.css'
 import './04-composition.css'
 
@@ -26,7 +27,7 @@ function Avatar(props) {
       style={{
         width: props.size,
         height: props.size,
-        borderRadius: props.size / 2
+        borderRadius: props.size / 2,
       }}
     />
   )
@@ -47,20 +48,20 @@ Avatar.propTypes = {
 function Icon(props) {
   return (
     <a href={props.href} target="_blank" className="Icon">
-      <i className={`fa fa-${props.type}`}/>
+      <i className={`fa fa-${props.type}`} />
     </a>
   )
 }
 
 Icon.propTypes = {
   href: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
 }
 
 export const example = () => (
   <div>
-    Render a {`<Person />`} component here
-    with all the required props (specify your own info if you want).
+    Render a {`<Person />`} component here with all the required props (specify
+    your own info if you want).
   </div>
 )
 

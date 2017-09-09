@@ -1,5 +1,6 @@
 // Learn more about React PropTypes here: https://facebook.github.io/react/docs/reusable-components.html#prop-validation
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function SayHello(props) {
   return (
@@ -22,8 +23,8 @@ export const example = () => (
 // WORKSHOP_END
 // FINAL_START
 SayHello.propTypes = {
-  firstName: React.PropTypes.string.isRequired,
-  lastName: React.PropTypes.string.isRequired,
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
 }
 
 export const example = () => (

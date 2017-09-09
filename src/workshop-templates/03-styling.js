@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 // WORKSHOP_START
 // import the css styles using: `import './03-styling.css'`
 // this will use webpack to load the css styles into your app.

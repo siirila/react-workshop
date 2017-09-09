@@ -1,7 +1,8 @@
-import React, {PropTypes, Component} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 
-// State and imparative code are two of the things that makes building applications more difficult.
+// State and imperative code are two of the things that makes building applications more difficult.
 // And we haven't even started talking about context yet!
 // The more components we can have that have no state and completely declarative the better.
 // Doing this makes things easier to test and maintain.
@@ -74,22 +75,26 @@ class RepoListContainer extends Component {
     username: PropTypes.string.isRequired,
     fetch: PropTypes.func,
   }
-  static defaultProps = { fetch: axios.get }
+  static defaultProps = {fetch: axios.get}
   state = {repos: null, loading: false, error: null}
-  
+
   componentDidMount() {
     this.fetchRepos()
   }
-  
+
   fetchRepos() {
     this.setState({repos: null, loading: true, error: null})
-    this.props.fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=100&sort=pushed`)
+    this.props
+      .fetch(
+        `https://api.github.com/users/${this.props
+          .username}/repos?per_page=100&sort=pushed`,
+      )
       .then(
         ({data: repos}) => this.setState({repos, error: null, loading: false}),
-        error => this.setState({repos: null, error, loading: false})
+        error => this.setState({repos: null, error, loading: false}),
       )
   }
-  
+
   render() {
     const {repos, loading, error} = this.state
     const {username} = this.props
@@ -113,7 +118,7 @@ function RepoList({username, repos}) {
     <div>
       <h1>{username}'s repos</h1>
       <ul style={{textAlign: 'left'}}>
-        {repos.map((repo) => {
+        {repos.map(repo => {
           return <li key={repo.id}>{repo.name}</li>
         })}
       </ul>
@@ -122,10 +127,12 @@ function RepoList({username, repos}) {
 }
 RepoList.propTypes = {
   username: PropTypes.string.isRequired,
-  repos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  })).isRequired,
+  repos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 }
 
 export const example = () => (
@@ -149,7 +156,7 @@ function mockFetch() {
             {id: 12345, name: 'turbo-sniffle'},
             {id: 54321, name: 'ubiquitous-succotash'},
             {id: 43234, name: 'solid-waffle'},
-          ]
+          ],
         })
       }
     }, delay)

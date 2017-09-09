@@ -1,29 +1,58 @@
 import React from 'react'
-import logo from './logo.svg'
-import './app.css'
-import StopWatch from './exercises-final/06-state'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {Div} from 'glamorous'
+
+import Exercises from './exercises'
+import Final, {List} from './exercises-final'
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <img
-          src={logo}
-          className="App-logo"
-          alt="logo"
-        />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-      <div>
-        <p>
-          Here's one of the components from the workshop!
-        </p>
-        <StopWatch />
-      </div>
-    </div>
+    <Router>
+      <Route
+        path="/"
+        render={props => (
+          <Div
+            display="flex"
+            marginLeft={20}
+            marginRight={20}
+            css={{
+              '& > *': {
+                paddingLeft: 10,
+                paddingRight: 10,
+                borderRight: '1px solid',
+              },
+              '& > *:last-child': {
+                paddingRight: 0,
+                borderRight: 'none',
+              },
+            }}
+          >
+            <div
+              style={{
+                width: '20vw',
+                minWidth: 200,
+                maxWidth: 400,
+              }}
+            >
+              <h1 style={{textAlign: 'center'}}>Exercises</h1>
+              <List {...props} />
+            </div>
+            <div
+              style={{
+                flex: 1,
+              }}
+            >
+              <h1 style={{textAlign: 'center'}}>Your Implementation</h1>
+              <Exercises {...props} />
+            </div>
+            <div style={{flex: 1}}>
+              <h1 style={{textAlign: 'center'}}>Final Implementation</h1>
+              <Final {...props} />
+            </div>
+          </Div>
+        )}
+      />
+    </Router>
   )
 }
 
