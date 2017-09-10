@@ -18,25 +18,17 @@
 
 - [Create React App][create-react-app].
 - [Matt Zabriskie][matt] for his [react-workshop][original-repo] upon which this one is based.
-- [KADIRA][kadira] for their [react-storybook][storybook]
-- [React Docs](http://facebook.github.io/react). Several examples have been lifted from there.
+- [React Docs](http://facebook.github.io/react). Some examples have been lifted from there.
 
 ## Setup
 
-You need to have the latest [`node`][node], [`yarn`][yarn], and [`git`][git] installed. Then run:
+You need to have the latest [`node`][node], [`npm`][npm], and [`git`][git] installed. Then run:
 
 ```
 git clone https://github.com/kentcdodds/react-workshop.git
 cd react-workshop
-yarn run setup
+npm run setup
 ```
-
-### Note on yarn
-
-If you don't have `yarn` installed and don't want to use it for some reason, you can use [`npm`][npm] as well. Instead
-of `yarn run setup`, run `node ./scripts/install && npm run validate` and enjoy waiting (and hopefully things don't
-break for you). May be a good idea to still run `node ./scripts/verify` to verify you have the right version of other
-things too.
 
 ### All set up!
 
@@ -74,7 +66,7 @@ If you see any errors, read the output and try to follow any instructions. If th
 8. Controlled Form - [`src/exercises/08-controlled-form.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/08-controlled-form.js)
 9. Data Fetching - [`src/exercises/09-data-fetching.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/09-data-fetching.js)
 10. Higher Order Components - [`src/exercises/10-hoc.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/10-hoc.js)
-11. Render Callback - [`src/exercises/11-render-callback.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/11-render-callback.js)
+11. Render Callback - [`src/exercises/11-render-props.js`](https://github.com/kentcdodds/react-workshop/blob/master/src/exercises/11-render-props.js)
 
 ### Testing
 
@@ -126,6 +118,4 @@ MIT
 [create-react-app]: https://github.com/facebookincubator/create-react-app
 [matt]: https://github.com/mzabriskie
 [original-repo]: https://github.com/mzabriskie/react-workshop
-[kadira]: https://github.com/kadirahq
-[storybook]: https://github.com/kadirahq/react-storybook
 [issues]: https://github.com/kentcdodds/react-workshop/issues/new
