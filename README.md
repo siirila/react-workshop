@@ -1,7 +1,6 @@
 # React Workshop
 
 [![Build Status][build-badge]][build]
-[![Dependencies][dependencyci-badge]][dependencyci]
 [![MIT License][license-badge]][LICENSE]
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome][prs-badge]][prs]
@@ -97,8 +96,6 @@ MIT
 [git]: https://git-scm.com/
 [build-badge]: https://img.shields.io/travis/kentcdodds/react-workshop.svg?style=flat-square
 [build]: https://travis-ci.org/kentcdodds/react-workshop
-[dependencyci-badge]: https://dependencyci.com/github/kentcdodds/react-workshop/badge?style=flat-square
-[dependencyci]: https://dependencyci.com/github/kentcdodds/react-workshop
 [license-badge]: https://img.shields.io/badge/license-MIT%20License-blue.svg?style=flat-square
 [license]: https://github.com/kentcdodds/react-workshop/blob/master/other/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square

@@ -1,4 +1,4 @@
-// Learn more about React PropTypes here: https://facebook.github.io/react/docs/reusable-components.html#prop-validation
+// Learn more about React PropTypes here: https://facebook.github.io/react/docs/typechecking-with-proptypes.html
 import React from 'react'
 import PropTypes from 'prop-types'
 

@@ -22,6 +22,10 @@
 // React.createElement(SayHi, null)
 //
 // If you want to use JSX, you can write it like this:
+// <SayHi></SayHi>
+//
+// And you can use self-closing tags for elements with no children:
+//
 // <SayHi />
 //
 // Exercise:
@@ -30,17 +34,17 @@
 //
 // Tips:
 // - In react components, there must be one, and only one root element (often this is a div)
+//   Note that in React 16, you can alternatively return an array of elements.
 //
 // Bonus:
 // - Once you've finished the exercise, go ahead and explore what React.createElement
 //   (or the JSX equivalent) returns. This is an object called a React Element
 //   (aka: UI Descriptor object). Unlike DOM elements, creating these is super cheap.
+//   To do this, try: console.log(React.createElement(SayHello)) or console.log(<SayHello />)
+//   and open up the developer console.
 // WORKSHOP_END
 // FINAL_START
-ReactDOM.render(
-  <SayHello />,
-  document.getElementById('root')
-)
+ReactDOM.render(<SayHello />, document.getElementById('root'))
 
 function SayHello() {
   return <div>Hello World</div>

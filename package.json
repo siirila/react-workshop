@@ -32,6 +32,8 @@
     "develop": "npm run -s watch:split:src",
     "watch:split:src":
       "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
+    "watch:split:intro":
+      "nodemon --watch ./intro/workshop-templates --exec \"npm run split:intro\"",
     "split": "npm-run-all --parallel split:*",
     "split:src":
       "cd src && split-guide generate --templates-dir workshop-templates",
@@ -45,7 +47,7 @@
       "node ./scripts/verify && node ./scripts/install && npm run validate -s",
     "format": "kcd-scripts format \"**/*.js\"",
     "precommit":
-      "npm run split && npm run format && git add src/exercises src/exercises-final && npm run validate",
+      "npm run split && npm run format && git add src/exercises src/exercises-final intro/exercises intro/exercises-final && npm run validate",
     "validate": "kcd-scripts validate"
   }
 }
