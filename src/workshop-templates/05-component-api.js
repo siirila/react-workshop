@@ -243,13 +243,13 @@ class ContrivedComponentContainer extends Component {
   }
 }
 
-export const example = () => <ContrivedComponentContainer />
+export const Example = () => <ContrivedComponentContainer />
 
 export default ContrivedComponentContainer
 // FINAL_END
 
 // WORKSHOP_START
-export const example = () => <div>Just look at the final</div>
+export const Example = () => <div>Just look at the final</div>
 
 /*
 eslint

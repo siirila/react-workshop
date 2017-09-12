@@ -70,7 +70,7 @@ Icon.propTypes = {
   type: PropTypes.string.isRequired,
 }
 
-export const example = () => (
+export const Example = () => (
   <Person
     name="Kent C. Dodds"
     title="JavaScript Developer"

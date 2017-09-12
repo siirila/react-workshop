@@ -15,12 +15,17 @@
   },
   "devDependencies": {
     "axios": "^0.16.2",
+    "chalk": "^2.1.0",
     "cpy-cli": "^1.0.1",
+    "cross-env": "^5.0.5",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
     "kcd-scripts": "^0.8.3",
     "nodemon": "^1.12.0",
     "npm-run-all": "^4.1.1",
     "react-router": "^4.2.0",
     "react-scripts": "^1.0.13",
+    "react-test-renderer": "^15.6.1",
     "split-guide": "^3.0.0"
   },
   "eslintConfig": {
@@ -36,9 +41,11 @@
       "nodemon --watch ./intro/workshop-templates --exec \"npm run split:intro\"",
     "split": "npm-run-all --parallel split:*",
     "split:src":
-      "cd src && split-guide generate --templates-dir workshop-templates",
+      "cd src && split-guide generate --templates-dir workshop-templates && cd ..",
     "split:intro":
       "cd intro && split-guide generate --templates-dir workshop-templates",
+    "test": "kcd-scripts test",
+    "test:final": "cross-env TEST_DIR=exercises-final kcd-scripts test",
     "start": "react-scripts start",
     "build": "npm-run-all build:*",
     "build:app": "react-scripts build",
@@ -47,7 +54,7 @@
       "node ./scripts/verify && node ./scripts/install && npm run validate -s",
     "format": "kcd-scripts format \"**/*.js\"",
     "precommit":
-      "npm run split && npm run format && git add src/exercises src/exercises-final intro/exercises intro/exercises-final && npm run validate",
-    "validate": "kcd-scripts validate"
+      "npm run split && npm run format && git add . && npm run validate",
+    "validate": "cross-env TEST_DIR=exercises-final kcd-scripts validate"
   }
 }

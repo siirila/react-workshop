@@ -17,7 +17,7 @@ function SayHello(props) {
 //
 // Then check out the error you get in the console when this example is rendered
 // Then fix this example and see the error removed
-export const example = () => (
+export const Example = () => (
   <SayHello firstName={true} />
 )
 // WORKSHOP_END
@@ -27,7 +27,7 @@ SayHello.propTypes = {
   lastName: PropTypes.string.isRequired,
 }
 
-export const example = () => (
+export const Example = () => (
   <SayHello firstName="Jill" lastName="Mayfield" />
 )
 // FINAL_END

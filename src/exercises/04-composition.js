@@ -59,7 +59,7 @@ Icon.propTypes = {
   type: PropTypes.string.isRequired,
 }
 
-export const example = () => (
+export const Example = () => (
   <div>
     Render a {`<Person />`} component here with all the required props (specify
     your own info if you want).

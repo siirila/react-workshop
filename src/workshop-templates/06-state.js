@@ -116,12 +116,6 @@ class StopWatch extends React.Component {
 
   // FINAL_END
   render() {
-    // WORKSHOP_START
-    return (
-      <div>Stop Watch!</div>
-    )
-    // WORKSHOP_END
-    // FINAL_START
     const buttonStyles = {
       border: '1px solid #ccc',
       background: '#fff',
@@ -130,9 +124,16 @@ class StopWatch extends React.Component {
       margin: '0 5px',
       width: '200px',
     }
+    const labelStyles = {fontSize: '5em', display: 'block'}
+    // WORKSHOP_START
+    return (
+      <div style={{textAlign: 'center'}}>Stop Watch!</div>
+    )
+    // WORKSHOP_END
+    // FINAL_START
     return (
       <div style={{textAlign: 'center'}}>
-        <label style={{fontSize: '5em', display: 'block'}}>{this.state.lapse}ms</label>
+        <label style={labelStyles}>{this.state.lapse}ms</label>
         <button style={buttonStyles} onClick={this.handleRunClick}>{this.state.running ? 'Stop' : 'Start'}</button>
         <button style={buttonStyles} onClick={this.handleClearClick}>Clear</button>
       </div>
@@ -142,7 +143,7 @@ class StopWatch extends React.Component {
 }
 
 // We don't need to do anything fancy here even with props, because the <StopWatch /> component tracks its own state!
-export const example = () => (
+export const Example = () => (
   <StopWatch />
 )
 

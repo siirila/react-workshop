@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-export const example = () => <div>Just look at the final</div>
+export const Example = () => <div>Just look at the final</div>
 
 /*
 eslint

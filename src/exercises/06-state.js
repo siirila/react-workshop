@@ -66,12 +66,21 @@ class StopWatch extends React.Component {
   // Public Class Fields. And you'll also need to have start and stop methods
   // which your click handlers will use to start and stop the setInterval
   render() {
-    return <div>Stop Watch!</div>
+    const buttonStyles = {
+      border: '1px solid #ccc',
+      background: '#fff',
+      fontSize: '2em',
+      padding: '15px',
+      margin: '0 5px',
+      width: '200px',
+    }
+    const labelStyles = {fontSize: '5em', display: 'block'}
+    return <div style={{textAlign: 'center'}}>Stop Watch!</div>
   }
 }
 
 // We don't need to do anything fancy here even with props, because the <StopWatch /> component tracks its own state!
-export const example = () => <StopWatch />
+export const Example = () => <StopWatch />
 
 export default StopWatch
 

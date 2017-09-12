@@ -59,12 +59,12 @@ class NameForm extends Component {
 }
 
 // WORKSHOP_START
-export const example = () => (
+export const Example = () => (
   <NameForm />
 )
 // WORKSHOP_END
 // FINAL_START
-export const example = () => (
+export const Example = () => (
   <NameForm defaultName="Marcy" />
 )
 // FINAL_END

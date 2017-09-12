@@ -79,7 +79,7 @@ Icon.propTypes = {
 }
 
 // WORKSHOP_START
-export const example = () => (
+export const Example = () => (
   <div>
     Render a {`<Person />`} component here
     with all the required props (specify your own info if you want).
@@ -87,7 +87,7 @@ export const example = () => (
 )
 // WORKSHOP_END
 // FINAL_START
-export const example = () => (
+export const Example = () => (
   <Person
     name="Kent C. Dodds"
     title="JavaScript Developer"

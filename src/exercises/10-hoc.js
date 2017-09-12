@@ -135,7 +135,7 @@ RepoList.propTypes = {
   ).isRequired,
 }
 
-export const example = () => (
+export const Example = () => (
   <RepoListContainer username="kentcdodds" fetch={mockFetch} />
 )
 

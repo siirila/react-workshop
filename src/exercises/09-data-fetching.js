@@ -79,7 +79,7 @@ RepoList.propTypes = {
   // add prop types for username and repos
 }
 
-export const example = () => <div>Render the RepoListContainer here</div>
+export const Example = () => <div>Render the RepoListContainer here</div>
 
 // This is for you. Merry Christmas 🎅 🎄 🎁
 function mockFetch() {

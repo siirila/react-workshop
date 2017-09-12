@@ -20,11 +20,11 @@ Box.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export const example = () => (
+export const Example = () => (
   <div>
-    Examples go in here... Give me 3 usages of your {`<Box>`} component. One for
-    each size. And for each, specify a `style` prop with some custom styling
-    (whatever you want, maybe consider `backgroundColor`)
+    Examples go in here... Give me 3 {`<Box>`} elements. One for each size. And
+    for each, specify a `style` prop with some custom styling (whatever you
+    want, maybe consider `backgroundColor`)
   </div>
 )
 

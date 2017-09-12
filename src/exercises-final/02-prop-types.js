@@ -15,6 +15,6 @@ SayHello.propTypes = {
   lastName: PropTypes.string.isRequired,
 }
 
-export const example = () => <SayHello firstName="Jill" lastName="Mayfield" />
+export const Example = () => <SayHello firstName="Jill" lastName="Mayfield" />
 
 export default SayHello

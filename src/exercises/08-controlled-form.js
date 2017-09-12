@@ -31,7 +31,7 @@ class NameForm extends Component {
   }
 }
 
-export const example = () => (
+export const Example = () => (
   <NameForm
     getErrorMessage={value => {
       if (value.length < 3) {

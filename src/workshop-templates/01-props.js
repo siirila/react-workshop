@@ -3,7 +3,7 @@ import React from 'react'
 function SayHello(props) {
   // WORKSHOP_START
   // Return JSX that uses the firstName and lastName values from the props argument
-  // to render "Hello {props.firstName} {props.lastName}"
+  // to render "Hello {props.firstName} {props.lastName}" in a div
   return (
     <div>Incomplete</div>
   )
@@ -17,12 +17,12 @@ function SayHello(props) {
 // WORKSHOP_START
 // export an example that specifies a firstName and a lastName
 // as props to the SayHello component
-export const example = () => (
+export const Example = () => (
   <div>Incomplete</div>
 )
 // WORKSHOP_END
 // FINAL_START
-export const example = () => (
+export const Example = () => (
   <SayHello firstName="Jill" lastName="Mayfield" />
 )
 // FINAL_END

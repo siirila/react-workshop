@@ -145,12 +145,12 @@ RepoList.propTypes = {
 }
 
 // WORKSHOP_START
-export const example = () => (
+export const Example = () => (
   <div>Render the RepoListContainer here</div>
 )
 // WORKSHOP_END
 // FINAL_START
-export const example = () => (
+export const Example = () => (
   <RepoListContainer username="kentcdodds" fetch={mockFetch} />
 )
 // FINAL_END

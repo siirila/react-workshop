@@ -17,7 +17,7 @@ Box.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export const example = () => (
+export const Example = () => (
   <div>
     <Box size="small" style={{backgroundColor: 'lightblue'}}>
       I'm in a small box!

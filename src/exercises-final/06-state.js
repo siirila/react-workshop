@@ -53,11 +53,10 @@ class StopWatch extends React.Component {
       margin: '0 5px',
       width: '200px',
     }
+    const labelStyles = {fontSize: '5em', display: 'block'}
     return (
       <div style={{textAlign: 'center'}}>
-        <label style={{fontSize: '5em', display: 'block'}}>
-          {this.state.lapse}ms
-        </label>
+        <label style={labelStyles}>{this.state.lapse}ms</label>
         <button style={buttonStyles} onClick={this.handleRunClick}>
           {this.state.running ? 'Stop' : 'Start'}
         </button>
@@ -70,6 +69,6 @@ class StopWatch extends React.Component {
 }
 
 // We don't need to do anything fancy here even with props, because the <StopWatch /> component tracks its own state!
-export const example = () => <StopWatch />
+export const Example = () => <StopWatch />
 
 export default StopWatch

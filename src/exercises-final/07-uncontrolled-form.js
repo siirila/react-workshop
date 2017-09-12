@@ -28,6 +28,6 @@ class NameForm extends Component {
   }
 }
 
-export const example = () => <NameForm defaultName="Marcy" />
+export const Example = () => <NameForm defaultName="Marcy" />
 
 export default NameForm
