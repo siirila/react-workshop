@@ -1,6 +1,6 @@
 build
 node_modules
-src/workshop-templates
+other/src-templates
 intro/*.min.js
 scripts/workshop-setup.js
 coverage/

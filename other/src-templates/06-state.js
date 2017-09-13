@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 // WORKSHOP_START
 // So far we've just been using function components.
 // Now that we need to worry about state in our component, we need to use the ES6 class syntax.
@@ -126,16 +125,18 @@ class StopWatch extends React.Component {
     }
     const labelStyles = {fontSize: '5em', display: 'block'}
     // WORKSHOP_START
-    return (
-      <div style={{textAlign: 'center'}}>Stop Watch!</div>
-    )
+    return <div style={{textAlign: 'center'}}>Stop Watch!</div>
     // WORKSHOP_END
     // FINAL_START
     return (
       <div style={{textAlign: 'center'}}>
         <label style={labelStyles}>{this.state.lapse}ms</label>
-        <button style={buttonStyles} onClick={this.handleRunClick}>{this.state.running ? 'Stop' : 'Start'}</button>
-        <button style={buttonStyles} onClick={this.handleClearClick}>Clear</button>
+        <button style={buttonStyles} onClick={this.handleRunClick}>
+          {this.state.running ? 'Stop' : 'Start'}
+        </button>
+        <button style={buttonStyles} onClick={this.handleClearClick}>
+          Clear
+        </button>
       </div>
     )
     // FINAL_END
@@ -143,9 +144,7 @@ class StopWatch extends React.Component {
 }
 
 // We don't need to do anything fancy here even with props, because the <StopWatch /> component tracks its own state!
-export const Example = () => (
-  <StopWatch />
-)
+export const Example = () => <StopWatch />
 
 export default StopWatch
 

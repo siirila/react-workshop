@@ -2,8 +2,8 @@ import React from 'react'
 import assert from 'assert'
 import chalk from 'chalk'
 import {render, mount} from 'enzyme'
-const StopWatch = require(`../${process.env.TEST_DIR || 'exercises'}/06-state`)
-  .default
+const StopWatch = require(`../../src/${process.env.TEST_DIR ||
+  'exercises'}/06-state`).default
 
 jest.useFakeTimers()
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import {render} from 'enzyme'
-const Person = require(`../${process.env.TEST_DIR ||
+const Person = require(`../../src/${process.env.TEST_DIR ||
   'exercises'}/04-composition`).default
 
 test('renders a person', () => {

@@ -67,11 +67,7 @@ class NameForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Name:
-          <input
-            type="text"
-            value={value}
-            onChange={this.handleChange}
-          />
+          <input type="text" value={value} onChange={this.handleChange} />
         </label>
         {hasError ? (
           <div style={{color: 'red'}}>{error}</div>

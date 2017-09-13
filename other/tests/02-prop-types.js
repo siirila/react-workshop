@@ -1,6 +1,6 @@
 import React from 'react'
 import {render} from 'enzyme'
-const SayHello = require(`../${process.env.TEST_DIR ||
+const SayHello = require(`../../src/${process.env.TEST_DIR ||
   'exercises'}/02-prop-types`).default
 
 const originalError = console.error

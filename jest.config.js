@@ -21,4 +21,7 @@ config.moduleNameMapper = Object.assign({}, config.moduleNameMapper, {
   '^.+\\.css$': '<rootDir>/other/css-mock.js',
 })
 
+config.roots = ['.']
+config.testMatch = ['<rootDir>/other/tests/**/*.js']
+
 module.exports = config
