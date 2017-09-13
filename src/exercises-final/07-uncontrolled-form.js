@@ -7,8 +7,8 @@ class NameForm extends Component {
   }
 
   handleSubmit = event => {
-    alert(`A name was submitted: ${this.input.value}`) // eslint-disable-line no-alert
     event.preventDefault()
+    alert(this.input.value)
   }
 
   render() {

@@ -8,6 +8,7 @@ function Person(props) {
   // - <div className="Person"> is your root element
   // - render props.name (in <b>), props.title (in <em>)
   // - render two <Icon /> components (one each for twitter and github) as <li> in a <ul>
+  return <div className="Person">{/* render stuff in here */}</div>
 }
 
 // Here are your propTypes :)

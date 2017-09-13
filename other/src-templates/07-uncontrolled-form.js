@@ -31,8 +31,8 @@ class NameForm extends Component {
   }
 
   handleSubmit = event => {
-    alert(`A name was submitted: ${ this.input.value}`) // eslint-disable-line no-alert
     event.preventDefault()
+    alert(this.input.value)
   }
 
   // FINAL_END
@@ -58,16 +58,9 @@ class NameForm extends Component {
   }
 }
 
-// WORKSHOP_START
-export const Example = () => (
-  <NameForm />
-)
-// WORKSHOP_END
-// FINAL_START
 export const Example = () => (
   <NameForm defaultName="Marcy" />
 )
-// FINAL_END
 
 export default NameForm
 
