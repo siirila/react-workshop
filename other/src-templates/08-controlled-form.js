@@ -44,10 +44,10 @@ class NameForm extends Component {
   }
 
   handleSubmit = event => {
-    if (!this.state.error) {
-      alert(`A name was submitted: ${this.state.value}`) // eslint-disable-line no-alert
-    }
     event.preventDefault()
+    if (!this.state.error) {
+      alert(this.state.value)
+    }
   }
 
   onValueChange(value = this.state.value) {
