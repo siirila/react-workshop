@@ -8,7 +8,7 @@ exports[`renders a person 1`] = `
     alt="user avatar"
     class="Avatar"
     src="http://kentcdodds.com/photo-512.png"
-    style="width:200px;height:200px;border-radius:100px;"
+    style="width:200px;height:200px;border-radius:100px"
   />
   <b>
     Kent C. Dodds

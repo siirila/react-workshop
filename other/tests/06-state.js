@@ -20,14 +20,14 @@ test('interacting with the stop watch', () => {
   let lastMs = 0
   jest.runOnlyPendingTimers()
   const label = wrapper.find('label').first()
-  const getCurrentMs = () => Number(label.node.textContent.split('ms')[0])
+  const getCurrentMs = () => Number(label.text().split('ms')[0])
 
   assert(
     getCurrentMs() > lastMs,
     chalk.red('Time lapsed is not incrementing and rerendering'),
   )
   assert.equal(
-    startStopButton.node.textContent,
+    startStopButton.text(),
     'Stop',
     chalk.red('The start button did not change to "Stop" when clicked'),
   )
@@ -43,7 +43,7 @@ test('interacting with the stop watch', () => {
     chalk.red('Time is not stopping when clicking the stop button'),
   )
   assert.equal(
-    startStopButton.node.textContent,
+    startStopButton.text(),
     'Start',
     chalk.red('The stop button did not change to "Start" when clicked'),
   )

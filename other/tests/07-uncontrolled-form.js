@@ -21,7 +21,7 @@ test('alerts with the value on submit', () => {
   const wrapper = mount(<NameForm />)
   const input = wrapper.find('input').first()
   const value = 'Hello world'
-  input.node.value = value
+  input.instance().value = value
   const form = wrapper.find('form')
   form.simulate('submit')
   expect(global.alert).toHaveBeenCalledTimes(1)
@@ -32,5 +32,5 @@ test('sets the default value of the input', () => {
   const defaultName = 'Joey'
   const wrapper = mount(<NameForm defaultName={defaultName} />)
   const input = wrapper.find('input').first()
-  expect(input.node.value).toEqual(defaultName)
+  expect(input.instance().value).toEqual(defaultName)
 })

@@ -4,19 +4,19 @@ exports[`Renders three styled boxes 1`] = `
 <div>
   <div
     class="Box Box--small"
-    style="background-color:lightblue;"
+    style="background-color:lightblue"
   >
     I'm in a small box!
   </div>
   <div
     class="Box Box--medium"
-    style="background-color:lightgreen;"
+    style="background-color:lightgreen"
   >
     I'm in a medium box!
   </div>
   <div
     class="Box Box--large"
-    style="background-color:orange;"
+    style="background-color:orange"
   >
     I'm in a large box!
   </div>

@@ -23,5 +23,7 @@ config.moduleNameMapper = Object.assign({}, config.moduleNameMapper, {
 
 config.roots = ['.']
 config.testMatch = ['<rootDir>/other/tests/**/*.js']
+config.setupFiles = config.setupFiles || []
+config.setupFiles.push('<rootDir>/other/setup-tests.js')
 
 module.exports = config
