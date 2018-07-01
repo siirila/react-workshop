@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders "The expected list of X-Men" 1`] = `
+<div>
+  <p>
+    The members of the X-Men Gold team are:
+  </p>
+  <ul>
+    <li>
+      <a
+        href="http://x-men.wikia.com/wiki/Wolverine"
+      >
+        Wolverine
+      </a>
+       aka Logan
+    </li>
+    <li>
+      <a
+        href="http://x-men.wikia.com/wiki/Cyclops"
+      >
+        Cyclops
+      </a>
+       aka Scott Summers
+    </li>
+    <li>
+      <a
+        href="http://x-men.wikia.com/wiki/Jean_Grey"
+      >
+        Jean Grey
+      </a>
+       aka Jean Summers
+    </li>
+    <li>
+      <a
+        href="http://x-men.wikia.com/wiki/Beast"
+      >
+        Beast
+      </a>
+       aka Hank McCoy
+    </li>
+    <li>
+      <a
+        href="http://x-men.wikia.com/wiki/Storm"
+      >
+        Storm
+      </a>
+       aka Ororo Munroe
+    </li>
+  </ul>
+</div>
+`;

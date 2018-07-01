@@ -3,8 +3,8 @@ import React from 'react'
 import {Route, Link} from 'react-router-dom'
 
 import {Example as Hello} from './01-hello'
-// import {Example as PropTypes} from './02-prop-types'
-// import {Example as Styling} from './03-styling'
+import {Example as Child} from './02-child'
+import {Example as Jumbled} from './03-jumbled'
 // import {Example as Composition} from './04-composition'
 // import {Example as ComponentAPI} from './05-component-api'
 // import {Example as State} from './06-state'
@@ -15,9 +15,9 @@ import {Example as Hello} from './01-hello'
 // import {Example as RenderProp} from './11-render-prop'
 
 const exercises = [
-  {title: 'Props', component: Hello},
-//   {title: 'PropTypes', component: PropTypes},
-//   {title: 'Styling', component: Styling},
+  {title: 'Hello', component: Hello},
+  {title: 'Child', component: Child},
+  {title: 'Jumbled', component: Jumbled},
 //   {title: 'Composition', component: Composition},
 //   {title: 'Component API', component: ComponentAPI},
 //   {title: 'State', component: State},

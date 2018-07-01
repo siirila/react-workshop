@@ -8,6 +8,13 @@ function Parent(props) {
   return <div>Replace this with the expected content</div>
 }
 
+// export an example that specifies child content that gets rendered
+export function Example() {
+  return (
+    <div>incomplete</div>
+  );
+}
+
 export default Parent
 
 /*
