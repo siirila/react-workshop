@@ -38,27 +38,19 @@
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
     "lint": "kcd-scripts lint",
-    "develop": "npm run -s watch:split:src",
-    "watch:split:src":
-      "nodemon --watch ./src/workshop-templates --exec \"npm run split:src\"",
-    "watch:split:intro":
-      "nodemon --watch ./intro/workshop-templates --exec \"npm run split:intro\"",
+    "develop": "npm run -s watch:split:props",
+    "watch:split:props": "nodemon --watch ./other/props-templates --exec \"npm run split:props\"",
     "split": "npm-run-all --parallel split:*",
-    "split:src":
-      "split-guide generate --templatesDir other/src-templates --exercisesDir src/exercises --exercisesFinalDir src/exercises-final",
-    "split:intro":
-      "split-guide generate --templatesDir other/intro-templates --exercisesDir intro/exercises --exercisesFinalDir intro/exercises-final",
+    "split:props": "split-guide generate --templatesDir other/props-templates --exercisesDir src/props/exercises --exercisesFinalDir src/props/exercises-final",
     "test": "kcd-scripts test",
     "test:final": "cross-env TEST_DIR=exercises-final kcd-scripts test",
     "start": "react-scripts start",
     "build": "npm-run-all build:*",
     "build:app": "react-scripts build",
     "build:intro": "cpy \"intro/**/*.*\" build --parents",
-    "setup":
-      "node ./scripts/verify && node ./scripts/install && npm run validate -s",
+    "setup": "node ./scripts/verify && node ./scripts/install && npm run validate -s",
     "format": "kcd-scripts format \"**/*.js\"",
-    "precommit":
-      "npm run split && npm run format && git add . && npm run validate",
+    "precommit": "npm run split && git add . && npm run validate",
     "validate": "cross-env TEST_DIR=exercises-final kcd-scripts validate"
   }
 }

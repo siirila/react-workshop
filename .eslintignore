@@ -1,6 +1,8 @@
 build
 node_modules
 other/src-templates
+other/props-templates
 intro/*.min.js
 scripts/workshop-setup.js
 coverage/
+original/

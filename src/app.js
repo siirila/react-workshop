@@ -2,8 +2,8 @@ import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {Div} from 'glamorous'
 
-import Exercises from './exercises'
-import Final, {List} from './exercises-final'
+import Exercises from './props/exercises'
+import Final, {List} from './props/exercises-final'
 
 function App() {
   return (

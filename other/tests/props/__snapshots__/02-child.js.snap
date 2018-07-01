@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders "Passed in a child string" in a div 1`] = `
+<div>
+  Passed in a child string
+</div>
+`;
+
+exports[`Renders <span>Child element passed in</span> in a div 1`] = `
+<div>
+  <span>
+    Child element passed in
+  </span>
+</div>
+`;
