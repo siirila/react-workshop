@@ -30,7 +30,7 @@ then you can get to the right spot by running `git checkout aca94d7` before runn
 You need to have the latest [`node`][node], [`npm`][npm], and [`git`][git] installed. Then run:
 
 ```
-git clone https://github.com/kentcdodds/react-workshop.git
+git clone https://github.com/siirila/react-workshop.git
 cd react-workshop
 npm run setup
 ```
